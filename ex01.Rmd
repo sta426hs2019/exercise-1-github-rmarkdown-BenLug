@@ -1,0 +1,19 @@
+---
+title: "Homework"
+author: "Benedikt Lugauer"
+date: "9/20/2019"
+output: html_document
+---
+
+### exercise 01 b
+
+In the following code chunk we sample from a log normal dist and plot the sampled
+values in a histogram.
+
+```{r}
+vals <- rlnorm(n = 100, meanlog = 1, sdlog = .25)
+hist(vals)
+hist(log(vals))
+```
+
+
