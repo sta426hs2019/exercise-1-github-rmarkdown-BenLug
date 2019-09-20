@@ -12,8 +12,10 @@ values in a histogram.
 
 ```{r}
 vals <- rlnorm(n = 100, meanlog = 1, sdlog = .25)
-hist(vals)
+hist(vals) 
 hist(log(vals))
 ```
 
+The empirical mean calculated from the data: `r mean(vals)`.\
+The empirical variance equals `r var(vals)`.
 
