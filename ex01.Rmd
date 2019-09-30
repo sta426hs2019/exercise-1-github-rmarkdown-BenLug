@@ -1,21 +1,30 @@
 ---
-title: "Homework"
+title: "Exercise I - rmarkdown"
 author: "Benedikt Lugauer"
-date: "9/20/2019"
+date: "20/09/2019"
 output: html_document
 ---
 
-### exercise 01 b
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## sample from a log-normal distribution
 
 In the following code chunk we sample from a log normal dist and plot the sampled
 values in a histogram.
 
 ```{r}
+set.seed(123)
 vals <- rlnorm(n = 100, meanlog = 1, sdlog = .25)
-hist(vals) 
-hist(log(vals))
+hist(vals, main = "Histogram of the sample created from a log-normal dist") 
+hist(log(vals), main = "Histgoram of the sample on a log scale")
 ```
+
+## summary statistics for the sample
 
 The empirical mean calculated from the data: `r mean(vals)`.\
 The empirical variance equals `r var(vals)`.
+
+
 
